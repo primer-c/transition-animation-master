@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo of skew</title>
+  <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/all.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      transform: rotate(-25deg) skew(25deg);
+      display: flex;
+    }
+    ul li {
+      width: 60px;
+      height: 60px;
+      margin: 0 10px;
+      background: #333;
+      position: relative;
+    }
+    ul li:before {
+      content: "";
+      width: inherit;
+      height: 10px;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      transform-origin: top; 
+      transform: skewX(-45deg);
+      background: #333;
+    }
+    ul li:after {
+      content: "";
+      width: 10px;
+      height: inherit;
+      position: absolute;
+      top: 0;
+      left: -10px;
+      transform-origin: right;
+      transform: skewY(-45deg);
+      background: #333;
+    }
+    ul li a span {
+      transition: 0.5s;
+      width: 60px;
+      height: 60px;
+      background: #333;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    /* 改变span颜色 */
+    ul li:nth-of-type(1):hover span {
+        background: #3b5999;
+      }
+    ul li:nth-of-type(2):hover span {
+      background: #e4405f;
+    }
+    ul li:nth-of-type(3):hover span {
+      background: #55acee;
+    }
+    ul li:nth-of-type(4):hover span {
+      background: #25d366;
+    }
+    ul li:nth-of-type(5):hover span {
+      background: #f4a261;
+    }
+    ul li:nth-of-type(6):hover span {
+      background: #d62828;
+    }
+
+    /* 改变span位置 */
+    ul li:hover span:nth-child(5) {
+      transform: translate(40px,-40px);
+      opacity: 1;
+    }
+    ul li:hover span:nth-child(4) {
+      transform: translate(30px,-30px);
+      opacity: 0.8;
+    }
+    ul li:hover span:nth-child(3) {
+      transform: translate(20px,-20px);
+      opacity: 0.6;
+    }
+    ul li:hover span:nth-child(2) {
+      transform: translate(10px,-10px);
+      opacity: 0.4;
+    }
+    ul li:hover span:nth-child(1) {
+      transform: translate(0px,0px);
+      opacity: 0.2;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+      <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fas fa-camera"></span>
+      </a>
+     </li>
+   <li>
+     <a href="">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fas fa-user"></span>
+     </a>
+   </li>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fab fa-instagram"></span>
+     </a>
+   </li>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fab fa-facebook"></span>
+     </a>
+   </li>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fab fa-twitter"></span>
+     </a>
+   </li>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fab fa-whatsapp"></span>
+     </a>
+   </li>
+  </ul>
+</body>
+</html>

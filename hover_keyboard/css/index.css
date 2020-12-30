@@ -1,0 +1,102 @@
+.center {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+body {
+  min-height: 100vh;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+body ul {
+  display: flex;
+  transform-style: perserve-3d;
+  transform: rotate(-15deg) skew(25deg);
+}
+body ul li {
+  width: 60px;
+  height: 60px;
+  list-style: none;
+  margin: 0 10px;
+  position: relative;
+}
+body ul li:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background: #2a2a2a;
+  transform-origin: top;
+  transform: skewX(-46deg);
+}
+body ul li:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 10px;
+  height: 100%;
+  background: #2a2a2a;
+  transform-origin: right;
+  transform: skewY(-46deg);
+}
+body ul li:hover span {
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.05);
+  color: #fff;
+  z-index: 1000;
+}
+body ul li:hover span:nth-child(5) {
+  transform: translate(40px, -40px);
+  opacity: 1;
+}
+body ul li:hover span:nth-child(4) {
+  transform: translate(30px, -30px);
+  opacity: 0.8;
+}
+body ul li:hover span:nth-child(3) {
+  transform: translate(20px, -20px);
+  opacity: 0.6;
+}
+body ul li:hover span:nth-child(2) {
+  transform: translate(10px, -10px);
+  opacity: 0.4;
+}
+body ul li:hover span:nth-child(1) {
+  transform: translate(0px, 0px);
+  opacity: 0.2;
+}
+body ul li a span {
+  transition: 0.5s;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  background: #333;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.4);
+}
+body ul li:nth-of-type(1):hover span {
+  background: #3b5999;
+}
+body ul li:nth-of-type(2):hover span {
+  background: #e4405f;
+}
+body ul li:nth-of-type(3):hover span {
+  background: #55acee;
+}
+body ul li:nth-of-type(4):hover span {
+  background: #25d366;
+}
+body ul li:nth-of-type(5):hover span {
+  background: #f4a261;
+}
+body ul li:nth-of-type(6):hover span {
+  background: #d62828;
+}

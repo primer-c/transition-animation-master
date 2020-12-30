@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo of skew</title>
+  <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/all.css">
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      transform: rotate(-35deg) skew(25deg);
+      display: flex;
+    }
+    ul li {
+      width: 60px;
+      height: 60px;
+      margin: 0 10px;
+      background: #333;
+      position: relative;
+    }
+    ul li:before {
+      content: "";
+      width: inherit;
+      height: 10px;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      transform-origin: top; 
+      transform: skewX(-45deg);
+      background: #333;
+    }
+    ul li:after {
+      content: "";
+      width: 10px;
+      height: inherit;
+      position: absolute;
+      top: 0;
+      left: -10px;
+      transform-origin: right;
+      transform: skewY(-45deg);
+      background: #333;
+    }
+    ul li a span {
+      width: 60px;
+      height: 60px;
+      background: #333;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+      <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fas fa-camera"></span>
+      </a>
+     </li>
+   <li>
+     <a href="">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fas fa-user"></span>
+     </a>
+   </li>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fab fa-instagram"></span>
+     </a>
+   </li>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fab fa-facebook"></span>
+     </a>
+   </li>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fab fa-twitter"></span>
+     </a>
+   </li>
+   <li>
+     <a href="#">
+       <span></span>
+       <span></span>
+       <span></span>
+       <span></span>
+       <span class="fab fa-whatsapp"></span>
+     </a>
+   </li>
+  </ul>
+</body>
+</html>
